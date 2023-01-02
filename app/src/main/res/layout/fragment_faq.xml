@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/app_background">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardview"
+            android:layout_width="383dp"
+            android:layout_height="503dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="12dp"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="16dp"
+                tools:context=".main.CreateSignalFragment">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/about_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="FAQs"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/faq_desc"
+                    android:layout_width="325dp"
+                    android:layout_height="53dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:justificationMode="inter_word"
+                    android:text="Welcome to our FAQ page! Here, you'll find answers to some of the most commonly asked questions about our company and services."
+                    android:textAlignment="textStart"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageLogo" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imageLogo"
+                    android:layout_width="145dp"
+                    android:layout_height="113dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="116dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/about_title"
+                    app:srcCompat="@drawable/safewheel_logo" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/about_text"
+                    android:layout_width="323dp"
+                    android:layout_height="207dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:justificationMode="inter_word"
+                    android:text="Q: What is Safewheel?\nA: Safewheel is an application that helps ensure the safety of wheelchair users. Safewheel is designed specifically for the unique needs of individuals who rely on wheelchairs for mobility.\n\nQ: How the app works?\nA:  The application has two features: a api feature that helps caregivers monitor the current status of a wheelchair user and a CRUD system that allows caregivers to track and list users who need assistance.   "
+                    android:textAlignment="textStart"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/faq_desc" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</layout>

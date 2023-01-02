@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/enabled"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.proj.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_positionListFragment"
+            app:destination="@id/positionListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_positionApiFragment"
+            app:destination="@id/positionApiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/positionApiFragment"
+        android:name="com.example.proj.api.PositionApiFragment"
+        android:label="PositionApiFragment" />
+    <fragment
+        android:id="@+id/positionListFragment"
+        android:name="com.example.proj.PositionListFragment"
+        android:label="PositionListFragment" >
+        <action
+            android:id="@+id/action_positionListFragment_to_createPositionFragment"
+            app:destination="@id/createPositionFragment" />
+        <action
+            android:id="@+id/action_positionListFragment_to_updatePositionFragment"
+            app:destination="@id/updatePositionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createPositionFragment"
+        android:name="com.example.proj.CreatePositionFragment"
+        android:label="CreatePositionFragment" />
+    <fragment
+        android:id="@+id/updatePositionFragment"
+        android:name="com.example.proj.UpdatePositionFragment"
+        android:label="UpdatePositionFragment" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.proj.AboutFragment"
+        android:label="AboutFragment" />
+    <fragment
+        android:id="@+id/faqFragment"
+        android:name="com.example.proj.FaqFragment"
+        android:label="FaqFragment" />
+</navigation>
